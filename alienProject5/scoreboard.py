@@ -3,7 +3,8 @@ from pygame.sprite import Group
 from ship import Ship
 from settings import Settings
 
-DARK_GREY = (30, 30, 30)
+WHITE = (255, 255, 255)
+DARK_BLUE = (0, 77, 255)
 
 
 class SbElement:
@@ -14,7 +15,7 @@ class SbElement:
         self.ul = ul
         self.font = font
         self.round = round
-        self.text_color = DARK_GREY
+        self.text_color = WHITE
         self.score_image, self.score_rect = None, None
         self.get_score = get_score
         self.last_score = self.get_score()
@@ -53,13 +54,13 @@ class Scoreboard():
 
         font = pg.font.SysFont(None, 48)
 
-        self.score = SbElement(screen=screen, bg_color=(90, 90, 90),
+        self.score = SbElement(screen=screen, bg_color=(0, 77, 255),
                                ul=(sr.right - 40, 20), font=font,
                                get_score=self.stats.get_score)
-        self.highscore = SbElement(screen=screen, bg_color=(90, 90, 90),
+        self.highscore = SbElement(screen=screen, bg_color=(0, 77, 255)),
                                    ul=(sr.centerx, 20), font=font, 
                                    get_score=self.stats.get_highscore)
-        self.level = SbElement(screen=screen, bg_color=(90, 90, 90),
+        self.level = SbElement(screen=screen, bg_color=(0, 77, 255),
                                    ul=(sr.right - 40, 50), font=font,
                                    get_score=self.stats.get_level, round=False)
 
