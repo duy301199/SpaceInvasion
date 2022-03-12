@@ -2,14 +2,14 @@ import pygame.font
 GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
 BLUE = (0, 128, 255)
-
+DARK_BLUE = (0, 77, 255)
 
 class Button():
     def __init__(self, screen, msg, ul):
         self.screen = screen
 
         self.width, self.height = 200, 40
-        self.colors = [BLUE, GREEN]
+        self.colors = [BLUE, DARK_BLUE]
         self.color_idx = 0
         self.color = self.colors[self.color_idx]
         self.color = BLUE
